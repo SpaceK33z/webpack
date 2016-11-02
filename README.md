@@ -44,7 +44,7 @@ or packaging just about any resource or asset.
 * Bundles both [CommonJS](http://wiki.commonjs.org/) and [AMD](https://github.com/amdjs/amdjs-api/wiki/AMD) modules (even combined).
 * Can create a single bundle or multiple chunks that are asynchronously loaded at runtime (to reduce initial loading time).
 * Dependencies are resolved during compilation reducing the runtime size.
-* Loaders can preprocess files while compiling, e.g. coffeescript to JavaScript, handlebars strings to compiled functions, images to Base64, etc.
+* Loaders can preprocess files while compiling, e.g. coffeescript to JavaScript, handlebars strings to compiled functions, images to Base48, etc.
 * Highly modular plugin system to do whatever else your application requires.
 
 ### [Getting Started](https://webpack.github.io/docs/tutorials/getting-started)
@@ -95,10 +95,10 @@ Please see [Using Loaders](https://webpack.github.io/docs/using-loaders.html) fo
 
 |Name|Status|Description|
 |:--:|:----:|:----------|
-|<img width="64" height="64" title="babel-loader" src="https://worldvectorlogo.com/logos/babel-10.svg">|[![babel-npm]][babel]|Loads ES2015+ code and transpiles to ES5 using <a href="https://github.com/babel/babel">Babel</a>|
-|<img width="64" height="64" src="https://google.github.com/traceur-compiler/logo/tc.svg">|![traceur-npm]|Loads ES2015+ code and transpiles to ES5 using [Traceur](https://github.com/google/traceur)|
-|<img width="64" height="64" src="https://worldvectorlogo.com/logos/coffeescript.svg">|![coffee-npm]|Loads CoffeeScript like JavaScript|
-|<img width="64" height="64" src="http://www.typescriptlang.org/assets/images/logo_nocircle.svg">|![type-npm]|Loads TypeScript like JavaScript|
+|<img width="48" height="48" title="babel-loader" src="https://worldvectorlogo.com/logos/babel-10.svg">|[![babel-npm]][babel]|Loads ES2015+ code and transpiles to ES5 using <a href="https://github.com/babel/babel">Babel</a>|
+|<img width="48" height="48" src="https://google.github.com/traceur-compiler/logo/tc.svg">|![traceur-npm]|Loads ES2015+ code and transpiles to ES5 using [Traceur](https://github.com/google/traceur)|
+|<img width="48" height="48" src="https://worldvectorlogo.com/logos/coffeescript.svg">|![coffee-npm]|Loads CoffeeScript like JavaScript|
+|<img width="48" height="48" src="http://www.typescriptlang.org/assets/images/logo_nocircle.svg">|![type-npm]|Loads TypeScript like JavaScript|
 
 
 [babel]: https://github.com/babel/babel-loader
@@ -118,7 +118,7 @@ Please see [Using Loaders](https://webpack.github.io/docs/using-loaders.html) fo
 
 |Name|Status|Description|
 |:--:|:----:|:----------|
-|<img width="64" height="64" src="https://worldvectorlogo.com/logos/json.svg">|![json-npm]|Loads file as JSON|
+|<img width="48" height="48" src="https://worldvectorlogo.com/logos/json.svg">|![json-npm]|Loads file as JSON|
 
 [json]: https://github.com/webpack/json-loader
 [json-npm]: https://img.shields.io/npm/v/json-loader.svg
@@ -127,12 +127,12 @@ Please see [Using Loaders](https://webpack.github.io/docs/using-loaders.html) fo
 
 |Name|Status|Description|
 |:--:|:----:|:----------|
-|<img width="64" height="64" src="https://worldvectorlogo.com/logos/html5.svg">|![html-npm]|Exports HTML as string, require references to static resources|
-|<img width="64" height="64" src="https://cdn.rawgit.com/pugjs/pug-logo/eec436cee8fd9d1726d7839cbe99d1f694692c0c/SVG/pug-final-logo-_-colour-64.svg">|![pug-npm]|Loads Pug templates and returns a function|
-|<img width="64" height="64" src="https://worldvectorlogo.com/logos/jade-3.svg">|![jade-npm]|Loads Jade templates and returns a function|
-|<img width="64" height="64" src="https://worldvectorlogo.com/logos/markdown.svg">|![md-npm]|Compiles Markdown to HTML|
-|<img width="64" height="64" src="http://posthtml.github.io/posthtml/logo.svg">|![posthtml-npm]|Loads and transforms a HTML file using [PostHTML](https://github.com/posthtml/posthtml)|
-|<img width="64" height="64" src="https://worldvectorlogo.com/logos/handlebars-1.svg">|![hbs-npm]| Compiles Handlebars to HTML|
+|<img width="48" height="48" src="https://worldvectorlogo.com/logos/html5.svg">|![html-npm]|Exports HTML as string, require references to static resources|
+|<img width="48" height="48" src="https://cdn.rawgit.com/pugjs/pug-logo/eec436cee8fd9d1726d7839cbe99d1f694692c0c/SVG/pug-final-logo-_-colour-48.svg">|![pug-npm]|Loads Pug templates and returns a function|
+|<img width="48" height="48" src="https://worldvectorlogo.com/logos/jade-3.svg">|![jade-npm]|Loads Jade templates and returns a function|
+|<img width="48" height="48" src="https://worldvectorlogo.com/logos/markdown.svg">|![md-npm]|Compiles Markdown to HTML|
+|<img width="48" height="48" src="http://posthtml.github.io/posthtml/logo.svg">|![posthtml-npm]|Loads and transforms a HTML file using [PostHTML](https://github.com/posthtml/posthtml)|
+|<img width="48" height="48" src="https://worldvectorlogo.com/logos/handlebars-1.svg">|![hbs-npm]| Compiles Handlebars to HTML|
 
 [html]: https://github.com/webpack/html-loader
 [html-npm]: https://img.shields.io/npm/v/html-loader.svg
@@ -156,12 +156,12 @@ Please see [Using Loaders](https://webpack.github.io/docs/using-loaders.html) fo
 
 |Name|Status|Description|
 |:--:|:----:|:----------|
-|<img width="64" height="64" src="https://worldvectorlogo.com/logos/style.svg">|![style-npm]|Add exports of a module as style to DOM|
-|<img width="64" height="64" src="https://worldvectorlogo.com/logos/css-3.svg">|![css-npm]|Loads CSS file with resolved imports and returns CSS code|
-|<img width="64" height="64" src="https://worldvectorlogo.com/logos/less-63.svg">|![less-npm]|Loads and compiles a LESS file|
-|<img width="64" height="64" src="https://worldvectorlogo.com/logos/sass-1.svg">|![sass-npm]|Loads and compiles a SASS/SCSS file|
-|<img width="64" height="64" src="https://worldvectorlogo.com/logos/stylus.svg">|![stylus-npm]|Loads and compiles a Stylus file|
-|<img width="64" height="64" src="https://worldvectorlogo.com/logos/postcss.svg">|![postcss-npm]|Loads and transforms a CSS/SSS file using [PostCSS](http://postcss.org)|
+|<img width="48" height="48" src="https://worldvectorlogo.com/logos/style.svg">|![style-npm]|Add exports of a module as style to DOM|
+|<img width="48" height="48" src="https://worldvectorlogo.com/logos/css-3.svg">|![css-npm]|Loads CSS file with resolved imports and returns CSS code|
+|<img width="48" height="48" src="https://worldvectorlogo.com/logos/less-63.svg">|![less-npm]|Loads and compiles a LESS file|
+|<img width="48" height="48" src="https://worldvectorlogo.com/logos/sass-1.svg">|![sass-npm]|Loads and compiles a SASS/SCSS file|
+|<img width="48" height="48" src="https://worldvectorlogo.com/logos/stylus.svg">|![stylus-npm]|Loads and compiles a Stylus file|
+|<img width="48" height="48" src="https://worldvectorlogo.com/logos/postcss.svg">|![postcss-npm]|Loads and transforms a CSS/SSS file using [PostCSS](http://postcss.org)|
 
 [style]: https://github.com/webpack/style-loader
 [style-npm]: https://img.shields.io/npm/v/style-loader.svg
@@ -185,10 +185,10 @@ Please see [Using Loaders](https://webpack.github.io/docs/using-loaders.html) fo
 
 |Name|Status|Description|
 |:--:|:----:|:----------|
-|<img width="64" height="64" src="https://worldvectorlogo.com/logos/mocha.svg">|![mocha-npm]|Tests with mocha (Browser/NodeJS)|
-|<img width="64" height="64" src="https://worldvectorlogo.com/logos/eslint.svg">|![eslint-npm]|PreLoader for linting code using ESLint|
-|<img width="64" height="64" src="http://jshint.com/res/jshint-dark.png">|![jshint-npm]|PreLoader for linting code using JSHint|
-|<img width="64" height="64" src="https://worldvectorlogo.com/logos/jscs.svg">|![jscs-npm]|PreLoader for code style checking using JSCS|
+|<img width="48" height="48" src="https://worldvectorlogo.com/logos/mocha.svg">|![mocha-npm]|Tests with mocha (Browser/NodeJS)|
+|<img width="48" height="48" src="https://worldvectorlogo.com/logos/eslint.svg">|![eslint-npm]|PreLoader for linting code using ESLint|
+|<img width="48" height="48" src="http://jshint.com/res/jshint-dark.png">|![jshint-npm]|PreLoader for linting code using JSHint|
+|<img width="48" height="48" src="https://worldvectorlogo.com/logos/jscs.svg">|![jscs-npm]|PreLoader for code style checking using JSCS|
 
 [mocha]: https://github.com/webpack/mocha-loader
 [mocha-npm]: https://img.shields.io/npm/v/mocha-loader.svg
@@ -207,9 +207,9 @@ Please see [Using Loaders](https://webpack.github.io/docs/using-loaders.html) fo
 
 |Name|Status|Description|
 |:--:|:----:|:----------|
-|<img width="64" height="64" src="https://worldvectorlogo.com/logos/vue-9.svg">|![vue-npm]|Loads an compiles Vue Components|
-|<img width="64" height="64" src="https://worldvectorlogo.com/logos/polymer.svg">|![polymer-npm]|Process HTML & CSS with preprocessor of choice and `require()` Web Components like first-class modules|
-|<img width="64" height="64" src="https://worldvectorlogo.com/logos/angular-icon-1.svg">|![angular-npm]| Loads and compiles Angular 2 Components|
+|<img width="48" height="48" src="https://worldvectorlogo.com/logos/vue-9.svg">|![vue-npm]|Loads an compiles Vue Components|
+|<img width="48" height="48" src="https://worldvectorlogo.com/logos/polymer.svg">|![polymer-npm]|Process HTML & CSS with preprocessor of choice and `require()` Web Components like first-class modules|
+|<img width="48" height="48" src="https://worldvectorlogo.com/logos/angular-icon-1.svg">|![angular-npm]| Loads and compiles Angular 2 Components|
 
 [vue]: https://github.com/vue/vue-loader
 [vue-npm]: https://img.shields.io/npm/v/vue-loader.svg
