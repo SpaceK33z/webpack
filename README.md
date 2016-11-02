@@ -6,24 +6,7 @@
 [![coverage][cover]][cover-url]
 
 <div align="center">
-  <a href="https://github.com/webpack/webpack">
-    <svg width="250" height="250" viewBox="0 0 1200 1000" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-      <title>Webpack</title>
-      <g id="Icon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-          <g id="webpack">
-              <g id="cube" transform="translate(163.000000, 106.000000)">
-                  <polygon id="border" fill="#FFFFFF" points="386.995555 0 773.991111 218.926312 773.991111 656.778936 386.995555 875.705248 3.88630819e-13 656.778936 1.4029432e-13 218.926312"></polygon>
-                  <g stroke-width="1" transform="translate(47.000000, 61.000000)">
-                      <g>
-                          <path d="M657.873333,580.673665 L352.774704,753.270266 L352.774704,618.855754 L542.907274,514.29798 L657.873333,580.673665 Z M678.756393,561.792596 L678.756393,200.879411 L567.118828,265.333389 L567.118828,485.143908 L567.118828,497.338618 L678.756393,561.792596 Z M20.8830605,580.673665 L325.981689,753.270266 L325.981689,618.855754 L135.849119,514.29798 L20.8830605,580.673665 Z M1.80262051e-13,561.792596 L-2.44367716e-14,200.879411 L111.637565,265.333389 L111.637565,485.143908 L111.637565,497.338618 L2.0250468e-13,561.792596 Z M13.0709342,177.488009 L325.981689,0.472029449 L325.981689,130.421685 L125.518524,240.660464 L123.966818,241.513778 L13.0709342,177.488009 Z M665.685459,177.488009 L352.774704,0.472029449 L352.774704,130.421685 L553.237869,240.660464 L554.789575,241.513778 L665.685459,177.488009 Z" id="outer-cube" fill="#8ED6FB"></path>
-                          <path d="M325.981689,588.282084 L138.43058,485.143908 L138.43058,280.802344 L325.981689,389.085027 L325.981689,588.282084 Z M352.774704,588.282084 L540.325813,485.143908 L540.325813,280.802344 L352.774704,389.085027 L352.774704,588.282084 Z M339.403391,381.336004 L339.378197,381.292365 L339.353002,381.336004 L339.403391,381.336004 Z M151.088673,257.172588 L339.378197,153.628343 L527.66772,257.172588 L339.378197,365.881595 L151.088673,257.172588 Z" id="inner-cube" fill="#1C78C0"></path>
-                      </g>
-                  </g>
-              </g>
-          </g>
-      </g>
-    </svg>
-  </a>
+  <a href="https://github.com/webpack/webpack"></a>
   <h1>Webpack</h1>
 	<a href="https://npmjs.com/package/webpack">
 		<img src="https://img.shields.io/npm/dm/webpack.svg">
@@ -37,9 +20,9 @@
 	<a href="https://gitter.im/webpack/webpack">
 		<img src="https://img.shields.io/badge/gitter-webpack%2Fwebpack-brightgreen.svg">
 	</a>
-  <div>
+  <p>
     Webpack is a bundler for modules. The main purpose is to bundle JavaScript files for usage in a browser, yet it is also capable of transforming, bundling, or packaging just about any resource or asset.
-  <div>
+  <p>
 </div>
 
 <h2 align="center">Install</h2>
@@ -330,6 +313,7 @@ You are also welcome to correct any spelling mistakes or any language issues.
 If you want to discuss something or just need help, [here is our gitter.im room](https://gitter.im/webpack/webpack).
 
 <h2 align="center">Backers</h2>
+<a href="https://opencollective.com/webpack#backer">Become a backer</a>
 
 This is a free-time project. The time I invest in it fluctuates. If you use webpack for a serious task, and you'd like me to invest more time on it, please donate. This project increases your income/productivity too. It makes development and applications faster and it reduces the required bandwidth.
 
@@ -337,10 +321,8 @@ Another way you can help fund Webpack is by buying the ebook ["SurviveJS - Webpa
 
 I'm very thankful for every dollar. If you leave your username or email, I may show my thanks by giving you extra support.
 
-[Become a backer](https://opencollective.com/webpack#backer)
-
-![Backers](https://opencollective.com/webpack/backers/badge.svg)
-
+<br>
+<br>
 <a href="https://opencollective.com/webpack/backer/0/website" target="_blank"><img src="https://opencollective.com/webpack/backer/0/avatar.svg"></a>
 <a href="https://opencollective.com/webpack/backer/1/website" target="_blank"><img src="https://opencollective.com/webpack/backer/1/avatar.svg"></a>
 <a href="https://opencollective.com/webpack/backer/2/website" target="_blank"><img src="https://opencollective.com/webpack/backer/2/avatar.svg"></a>
