@@ -6,7 +6,9 @@
 [![coverage][cover]][cover-url]
 
 <div align="center">
-  <a href="https://github.com/webpack/webpack"></a>
+  <a href="https://github.com/webpack/webpack">
+    <img width="200" heigth= "200" src="https://worldvectorlogo.com/logos/webpack.svg">
+  </a>
   <h1>Webpack</h1>
 	<a href="https://npmjs.com/package/webpack">
 		<img src="https://img.shields.io/npm/dm/webpack.svg">
@@ -158,8 +160,8 @@ Please see [Using Loaders](https://webpack.github.io/docs/using-loaders.html) fo
 |<img width="64" height="64" src="https://worldvectorlogo.com/logos/css-3.svg">|![css-npm]|Loads CSS file with resolved imports and returns CSS code|
 |<img width="64" height="64" src="https://worldvectorlogo.com/logos/less-63.svg">|![less-npm]|Loads and compiles a LESS file|
 |<img width="64" height="64" src="https://worldvectorlogo.com/logos/sass-1.svg">|![sass-npm]|Loads and compiles a SASS/SCSS file|
-|<img width="64" height="64" src="https://worldvectorlogo.com/logos/stylus.svg">|![stylus]|Loads and compiles a Stylus file|
-|<img width="64" height="64" src="https://worldvectorlogo.com/logos/postcss.svg">|![postcs-npm]|Loads and transforms a CSS/SSS file using [PostCSS](http://postcss.org)|
+|<img width="64" height="64" src="https://worldvectorlogo.com/logos/stylus.svg">|![stylus-npm]|Loads and compiles a Stylus file|
+|<img width="64" height="64" src="https://worldvectorlogo.com/logos/postcss.svg">|![postcss-npm]|Loads and transforms a CSS/SSS file using [PostCSS](http://postcss.org)|
 
 [style]: https://github.com/webpack/style-loader
 [style-npm]: https://img.shields.io/npm/v/style-loader.svg
@@ -376,9 +378,9 @@ I'm very thankful for every dollar. If you leave your username or email, I may s
 
 <h2 align="center">Sponsors</h2>
 
-Become a sponsor and get your logo on our README on Github with a link to your site. [Become a sponsor](https://opencollective.com/webpack#sponsor)
+Become a sponsor and get your logo on our README on Github with a link to your site.
 
-![Sponsors](https://opencollective.com/webpack/sponsors/badge.svg)
+[Become a sponsor](https://opencollective.com/webpack#sponsor)
 
 <a href="https://opencollective.com/webpack/sponsor/0/website" target="_blank"><img src="https://opencollective.com/webpack/sponsor/0/avatar.svg"></a>
 <a href="https://opencollective.com/webpack/sponsor/1/website" target="_blank"><img src="https://opencollective.com/webpack/sponsor/1/avatar.svg"></a>
