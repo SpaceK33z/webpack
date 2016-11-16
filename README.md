@@ -1,13 +1,13 @@
 [![npm][npm]][npm-url]
 [![node][node]][node-url]
 [![deps][deps]][deps-url]
-[![test][test]][test-url]
+[![tests][tests]][tests-url]
 [![build][build]][build-url]
 [![coverage][cover]][cover-url]
 
 <div align="center">
   <a href="https://github.com/webpack/webpack">
-    <img width="200" heigth= "200" src="https://worldvectorlogo.com/logos/webpack.svg">
+    <img width="200" heigth="200" src="https://webpack.js.org/assets/icon-square-big.svg">
   </a>
   <h1>Webpack</h1>
 	<a href="https://npmjs.com/package/webpack">
@@ -22,6 +22,7 @@
 	<a href="https://gitter.im/webpack/webpack">
 		<img src="https://img.shields.io/badge/gitter-webpack%2Fwebpack-brightgreen.svg">
 	</a>
+  <h1></h1>
   <p>
     Webpack is a bundler for modules. The main purpose is to bundle JavaScript files for usage in a browser, yet it is also capable of transforming, bundling, or packaging just about any resource or asset.
   <p>
@@ -30,7 +31,7 @@
 <h2 align="center">Install</h2>
 
 ```bash
-npm i -D webpack
+npm install --save-dev webpack
 ```
 
 <h2 align="center">Introduction</h2>
@@ -47,25 +48,47 @@ or packaging just about any resource or asset.
 * Loaders can preprocess files while compiling, e.g. coffeescript to JavaScript, handlebars strings to compiled functions, images to Base48, etc.
 * Highly modular plugin system to do whatever else your application requires.
 
-### [Getting Started](https://webpack.github.io/docs/tutorials/getting-started)
+### [Getting Started](https://webpack.js.org/get-started/)
 
-Check out webpack's [docs](https://webpack.github.io/docs/?utm_source=github&utm_medium=readme&utm_campaign=trdr) for quick Getting Started guide, in-depth usage,
-tutorials and resources.
+Check out webpack's [docs](https://webpack.js.org/how-to) for quick Getting Started guide, in-depth usage, tutorials and resources.
 
 <h2 align="center">Features</h2>
 
-### [Plugins](https://webpack.github.io/docs/list-of-plugins.html)
+### [Plugins](https://webpack.js.org/plugins)
 
 webpack has a [rich plugin
-interface](https://webpack.github.io/docs/plugins.html). Most of the features
+interface](https://webpack.github.io/api/plugins). Most of the features
 within webpack itself use this plugin interface. This makes webpack very
 **flexible**.
 
-### [Loaders](https://webpack.github.io/docs/list-of-loaders.html)
+|Name|Status|Description|
+|:--:|:----:|:----------|
+|[common-chunks-webpack-plugin][common]|![common-npm]|Generates chunks of common modules shared between entry points and splits them into separate  bundles (e.g vendor.bundle.js && app.bundle.js)|
+|[extract-text-webpack-plugin][extract]|![extract-npm]|Extracts Text (CSS) from your bundles into a separate file (app.bundle.css)|
+|[component-webpack-plugin][component]|![component-npm]|Use components with webpack|
+|[compression-webpack-plugin][compression]|![compression-npm]|Prepare compressed versions of assets to serve them with Content-Encoding|
+|[i18n-webpack-plugin][i18n]|![i18n-npm]|Adds i18n support to your bundles|
+|[html-webpack-plugin][html]|![html-npm]| Simplifies creation of HTML files (`index.html`) to serve your bundles|
+
+
+[common]: https://github.com/webpack/webpack/blob/master/lib/optimize/CommonsChunkPlugin.js
+[common-npm]: https://img.shields.io/npm/v/webpack.svg
+[extract]: https://github.com/webpack/extract-text-webpack-plugin
+[extract-npm]: https://img.shields.io/npm/v/extract-text-webpack-plugin.svg
+[component]: https://github.com/webpack/component-webpack-plugin
+[component-npm]: https://img.shields.io/npm/v/component-webpack-plugin.svg
+[compression]: https://github.com/webpack/compression-webpack-plugin
+[compression-npm]: https://img.shields.io/npm/v/compression-webpack-plugin.svg
+[i18n]: https://github.com/webpack/i18n-webpack-plugin
+[i18n-npm]: https://img.shields.io/npm/v/i18n-webpack-plugin.svg
+[html]: https://github.com/ampedandwired/html-webpack-plugin
+[html-npm]: https://img.shields.io/npm/v/component-webpack-plugin.svg
+
+### [Loaders](https://webpack.js.org/loaders)
 
 webpack enables use of loaders to preprocess files. This allows you to bundle
 **any static resource** way beyond JavaScript. You can easily [write your own
-loaders](https://webpack.github.io/docs/loaders.html) using node.js.
+loaders](https://webpack.js.org/api/loaders) using node.js.
 
 Loaders are activated by using `loadername!` prefixes in `require()` statements,
 or are automatically applied via regex from your webpack configuration.
@@ -95,11 +118,14 @@ Please see [Using Loaders](https://webpack.github.io/docs/using-loaders.html) fo
 
 |Name|Status|Description|
 |:--:|:----:|:----------|
+||![script-npm]|Executes a JavaScript file once in global context (like in script tag), requires are not parsed|
 |<img width="48" height="48" title="babel-loader" src="https://worldvectorlogo.com/logos/babel-10.svg">|[![babel-npm]][babel]|Loads ES2015+ code and transpiles to ES5 using <a href="https://github.com/babel/babel">Babel</a>|
 |<img width="48" height="48" src="https://google.github.com/traceur-compiler/logo/tc.svg">|![traceur-npm]|Loads ES2015+ code and transpiles to ES5 using [Traceur](https://github.com/google/traceur)|
 |<img width="48" height="48" src="https://worldvectorlogo.com/logos/coffeescript.svg">|![coffee-npm]|Loads CoffeeScript like JavaScript|
 |<img width="48" height="48" src="http://www.typescriptlang.org/assets/images/logo_nocircle.svg">|![type-npm]|Loads TypeScript like JavaScript|
 
+[script]: https://github.com/webpack/script-loader
+[script-npm]: https://img.shields.io/npm/v/script-loader.svg
 
 [babel]: https://github.com/babel/babel-loader
 [babel-npm]: https://img.shields.io/npm/v/babel-loader.svg
@@ -207,7 +233,7 @@ Please see [Using Loaders](https://webpack.github.io/docs/using-loaders.html) fo
 
 |Name|Status|Description|
 |:--:|:----:|:----------|
-|<img width="48" height="48" src="https://worldvectorlogo.com/logos/vue-9.svg">|![vue-npm]|Loads an compiles Vue Components|
+|<img width="48" height="48" src="https://worldvectorlogo.com/logos/vue-9.svg">|![vue-npm]|Loads an compiles Vue Conents|
 |<img width="48" height="48" src="https://worldvectorlogo.com/logos/polymer.svg">|![polymer-npm]|Process HTML & CSS with preprocessor of choice and `require()` Web Components like first-class modules|
 |<img width="48" height="48" src="https://worldvectorlogo.com/logos/angular-icon-1.svg">|![angular-npm]| Loads and compiles Angular 2 Components|
 
@@ -246,56 +272,80 @@ friendly** by using hashes.
 
 <h2 align="center">Example</h2>
 
+**Entry [app.js]**
 ```js
-// webpack is a module bundler.
-// This means webpack takes modules with dependencies
-// and emits static assets representing those modules.
 
-// Dependencies can be written in CommonJS
-var commonjs = require("./commonjs");
-// or in AMD
-define(["amd-module", "../file"], function (amdModule, file) {
-	// while previous constructs are sync,
-	// this is async
-	require(["big-module/big/file"], function (big) {
-		 // For async dependencies, webpack splits
-		 // your application into multiple "chunks".
-		 // This part of your application is
-		 // loaded on demand (code-splitting).
-		var stuff = require("../my/stuff");
-		// "../my/stuff" is also loaded on-demand
-		//  because it's in the callback function
-		//  of the AMD require.
-	});
-});
+import React from 'react'
+import { render } from 'react-dom'
 
+import $ from './styles/app.scss'
 
-require("coffee!./cup.coffee");
-// "Loaders" are used to preprocess files.
-// They can be prefixed in the require call
-// or configured in the configuration.
-require("./cup");
-// This does the same when you add ".coffee" to the extensions
-// and configure the "coffee" loader for /\.coffee$/
-
-function loadTemplate (name) {
-	return require("./templates/" + name + ".jade");
-	// Many expressions are supported in require calls.
-	// A clever parser extracts information and concludes
-	// that everything in "./templates" that matches
-	// /\.jade$/ should be included in the bundle, as it
-	// can be required.
+class App extends React.Component {
+  render () {
+    return (
+      <div className={$.intro}>
+        <h1 className={$.intro__title}>Hello World!</h1>
+      </div>
+    )
+  }
 }
 
+render(<App />, document.getElementbyId('app'))
+```
 
-// ...and you can combine everything.
-function loadTemplateAsync (name, callback) {
-	require(["bundle?lazy!./templates/" + name + ".jade"],
-	  function (templateBundle) {
-	          templateBundle(callback);
-	});
+**Config [webpack.config.js]**
+```js
+// Plugins
+const { CommonChunksPlugin } = require('webpack').optimize
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
+
+// Configuration
+module.exports = (env) => {
+  context: `${__dirname}/src/`,
+  entry: {
+    app: 'app.js',
+    vendor: ['react', 'react-dom']
+  },
+  output: {
+    path: `${_dirname}/dest/`,
+    publicPath: './public/'
+    filename: '[name].bundle.js'
+  },
+  module: {
+    rules: [
+      {
+        test: /\.(js|jsx)$/
+        use: [
+          { loader: 'babel-loader' options: { exclude: /node_modules/ } }
+        ]
+      },
+      {
+       test: /\.(sass|scss)$/
+       use: [
+        ExtractTextPlugin.extract({
+          fallbackLoader: 'style-loader'
+          loader: [
+            { loader: 'css-loader', options: { importLoaders: 1 } },
+            'sass-loader'
+           ]
+         })
+        ]
+      }
+    ]
+  },
+  plugins: [
+    new ExtractTextPlugin('[name].bundle.css')
+    new CommonChunkPlugin({
+      name: 'vendor',
+      filename: '[name].bundle.js',
+      chunks: ['app'],
+      minChunks: Infinity
+    })
+  ]
 }
 ```
+
+**Output [app.bundle.css, app.bundle.js, vendor.bundle.js]**
 
 <h2 align="center">Contributing</h2>
 
@@ -413,26 +463,32 @@ Become a sponsor and get your logo on our README on Github with a link to your s
     <td align="center">
       <img width="150 height="150"
       src="https://avatars.githubusercontent.com/u/1365881?v=3&s=150">
-      <br />
+      <br>
       <a href="https://github.com/sokra">Tobias Koppers</a>
     </td>
 		<td align="center">
       <img width="150 height="150"
       src="https://avatars.githubusercontent.com/u/166921?v=3&s=150">
-      <br />
+      <br>
       <a href="https://github.com/bebraw">Juho Vepsäläinen</a>
     </td>
 		<td align="center">
       <img width="150 height="150"
       src="https://avatars.githubusercontent.com/u/3408176?v=3&s=150">
-      <br />
+      <br>
       <a href="https://github.com/TheLarkInn">Sean Larkin</a>
     </td>
 		<td align="center">
       <img width="150 height="150"
       src="https://avatars.githubusercontent.com/u/781746?v=3&s=150">
-      <br />
+      <br>
       <a href="https://github.com/jhnns">Johannes Ewald</a>
+    </td>
+    <td align="center">
+      <img width="150 height="150"
+      src="https://avatars.githubusercontent.com/u/533616?v=3&s=150">
+      <br>
+      <a href="https://github.com/Spacek33">Kees Kluskens</a>
     </td>
    </tr>
   <tbody>
@@ -457,8 +513,8 @@ Become a sponsor and get your logo on our README on Github with a link to your s
 [node]: https://img.shields.io/node/v/webpack.svg
 [node-url]: https://nodejs.org
 
-[test]: https://img.shields.io/travis/webpack/webpack/master.svg
-[test-url]: https://travis-ci.org/webpack/webpack
+[tests]: https://img.shields.io/travis/webpack/webpack/master.svg
+[tests-url]: https://travis-ci.org/webpack/webpack
 
 [build-url]: https://ci.appveyor.com/project/sokra/webpack/branch/master
 [build]: https://ci.appveyor.com/api/projects/status/github/webpack/webpack?svg=true
