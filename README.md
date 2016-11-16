@@ -9,7 +9,8 @@
   <a href="https://github.com/webpack/webpack">
     <img width="200" heigth="200" src="https://webpack.js.org/assets/icon-square-big.svg">
   </a>
-  <h1>Webpack</h1>
+  <br>
+  <br>
 	<a href="https://npmjs.com/package/webpack">
 		<img src="https://img.shields.io/npm/dm/webpack.svg">
 	</a>
@@ -22,7 +23,7 @@
 	<a href="https://gitter.im/webpack/webpack">
 		<img src="https://img.shields.io/badge/gitter-webpack%2Fwebpack-brightgreen.svg">
 	</a>
-  <h1></h1>
+  <h1>Webpack</h1>
   <p>
     Webpack is a bundler for modules. The main purpose is to bundle JavaScript files for usage in a browser, yet it is also capable of transforming, bundling, or packaging just about any resource or asset.
   <p>
@@ -118,7 +119,7 @@ Please see [Using Loaders](https://webpack.github.io/docs/using-loaders.html) fo
 
 |Name|Status|Description|
 |:--:|:----:|:----------|
-||![script-npm]|Executes a JavaScript file once in global context (like in script tag), requires are not parsed|
+|`<script>`|![script-npm]|Executes a JavaScript file once in global context (like in script tag), requires are not parsed|
 |<img width="48" height="48" title="babel-loader" src="https://worldvectorlogo.com/logos/babel-10.svg">|[![babel-npm]][babel]|Loads ES2015+ code and transpiles to ES5 using <a href="https://github.com/babel/babel">Babel</a>|
 |<img width="48" height="48" src="https://google.github.com/traceur-compiler/logo/tc.svg">|![traceur-npm]|Loads ES2015+ code and transpiles to ES5 using [Traceur](https://github.com/google/traceur)|
 |<img width="48" height="48" src="https://worldvectorlogo.com/logos/coffeescript.svg">|![coffee-npm]|Loads CoffeeScript like JavaScript|
@@ -182,7 +183,7 @@ Please see [Using Loaders](https://webpack.github.io/docs/using-loaders.html) fo
 
 |Name|Status|Description|
 |:--:|:----:|:----------|
-|<img width="48" height="48" src="https://worldvectorlogo.com/logos/style.svg">|![style-npm]|Add exports of a module as style to DOM|
+|`<style>`|![style-npm]|Add exports of a module as style to DOM|
 |<img width="48" height="48" src="https://worldvectorlogo.com/logos/css-3.svg">|![css-npm]|Loads CSS file with resolved imports and returns CSS code|
 |<img width="48" height="48" src="https://worldvectorlogo.com/logos/less-63.svg">|![less-npm]|Loads and compiles a LESS file|
 |<img width="48" height="48" src="https://worldvectorlogo.com/logos/sass-1.svg">|![sass-npm]|Loads and compiles a SASS/SCSS file|
@@ -272,7 +273,7 @@ friendly** by using hashes.
 
 <h2 align="center">Example</h2>
 
-**Entry [app.js]**
+**app.js**
 ```js
 
 import React from 'react'
@@ -284,7 +285,7 @@ class App extends React.Component {
   render () {
     return (
       <div className={$.intro}>
-        <h1 className={$.intro__title}>Hello World!</h1>
+        <h1 className={$.intro__title}>Hello Webpack!</h1>
       </div>
     )
   }
@@ -293,7 +294,7 @@ class App extends React.Component {
 render(<App />, document.getElementbyId('app'))
 ```
 
-**Config [webpack.config.js]**
+**webpack.config.js**
 ```js
 // Plugins
 const { CommonChunksPlugin } = require('webpack').optimize
@@ -301,16 +302,18 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 // Configuration
 module.exports = (env) => {
-  context: `${__dirname}/src/`,
+  context: `${__dirname}/src`,
   entry: {
     app: 'app.js',
     vendor: ['react', 'react-dom']
   },
   output: {
-    path: `${_dirname}/dest/`,
-    publicPath: './public/'
+    path: `${__dirname}/dest/`,
     filename: '[name].bundle.js'
   },
+  resolve: {
+    extensions: ['.js', '.jsx']
+  }
   module: {
     rules: [
       {
@@ -320,20 +323,19 @@ module.exports = (env) => {
         ]
       },
       {
-       test: /\.(sass|scss)$/
-       use: [
-        ExtractTextPlugin.extract({
+        test: /\.(sass|scss)$/
+        use: [ ExtractTextPlugin.extract({
           fallbackLoader: 'style-loader'
           loader: [
             { loader: 'css-loader', options: { importLoaders: 1 } },
             'sass-loader'
-           ]
-         })
-        ]
+          ]
+        })]
       }
     ]
   },
   plugins: [
+    new HTMLPlugin({})
     new ExtractTextPlugin('[name].bundle.css')
     new CommonChunkPlugin({
       name: 'vendor',
@@ -345,7 +347,26 @@ module.exports = (env) => {
 }
 ```
 
-**Output [app.bundle.css, app.bundle.js, vendor.bundle.js]**
+**app.bundle.css,
+app.bundle.js,
+vendor.bundle.js**
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Webpack</title>
+    <link rel="stylesheet" href="app.bundle.css">
+  </head>
+  <body>
+    <div id="app">
+
+
+    <script src="vendor.bundle.js"></script>
+    <script src="app.bundle.js"></script>
+  </body>
+</html>
+```
 
 <h2 align="center">Contributing</h2>
 
